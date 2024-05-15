@@ -28,4 +28,6 @@ public class Lands
     {
         events.add(e);
     }
+
+    System.out.println("HELLO");
 }
