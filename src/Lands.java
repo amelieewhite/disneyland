@@ -8,26 +8,24 @@ import java.util.*;
 public class Lands
 {
     String name = "";
-    ArrayList stores = new ArrayList<store>();
-    ArrayList rides = new ArrayList<ride>();
-    ArrayList events = new ArrayList<event>();
+    ArrayList Stores = new ArrayList<Store>();
+    ArrayList Rides = new ArrayList<Ride>();
+    ArrayList Events = new ArrayList<Event>();
     
     public Lands()
     {
         name = "blank";
     }
-    public void addStore(store s)
+    public void addStore(Store s)
     {
-        stores.add(s);
+        Stores.add(s);
     }
-    public void addRide(ride r)
+    public void addRide(Ride r)
     {
-        rides.add(r);
+        Rides.add(r);
     }
-    public void addEvent(event e)
+    public void addEvent(Event e)
     {
-        events.add(e);
+        Events.add(e);
     }
-
-    System.out.println("HELLO");
 }

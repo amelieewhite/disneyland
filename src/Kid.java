@@ -11,7 +11,7 @@ public class Kid extends Person
     int hunger;
     int energy;
 
-    public kid(String n)
+    public Kid(String n)
     {
         super(n);
         hunger = 0;
@@ -26,6 +26,5 @@ public class Kid extends Person
     public void increaseEnergy(int howMuch)
     {
         super.increaseEnergy(howMuch);
-        }
     }
 }

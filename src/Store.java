@@ -10,9 +10,9 @@ public class Store
 {
    String name = "";
    String storeType = "";
-   ArrayList items = new ArrayList<item>();
+   ArrayList items = new ArrayList<Item>();
    
-   public store(String n, String sT)
+   public Store(String n, String sT)
    {
        name = n;
        storeType = sT;
