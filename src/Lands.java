@@ -7,7 +7,7 @@
 import java.util.*;
 public class Lands
 {
-    String name = "";
+    private String name;
     ArrayList Stores = new ArrayList<Store>();
     ArrayList Rides = new ArrayList<Ride>();
     ArrayList Events = new ArrayList<Event>();
