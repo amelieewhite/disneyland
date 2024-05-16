@@ -9,15 +9,15 @@ public class Person
 {
     String name;
     boolean isAdult;
-    int hunger;
+    int morale;
     int energy;
 
-    public Person(String n)
+    public Person(String n, boolean iA)
     {
         name = n;
-        isAdult = true;
-        hunger = 0;
-        energy = 0;
+        isAdult = iA;
+        morale = 100;
+        energy = 100;
     }
 
     public void decreaseEnergy(int howMuch)
@@ -33,12 +33,48 @@ public class Person
 
     public void increaseEnergy(int howMuch)
     {
-        if(energy + howMuch <= 10)
+        if(energy + howMuch <= 100)
         {
             energy += howMuch;
         }
         else {
-            energy = 10;
+            energy = 100;
         }
+    }
+    public void increaseMorale(int howMuch)
+    {
+        if(morale + howMuch <= 100)
+        {
+            morale += howMuch;
+        }
+        else {
+            morale = 100;
+        }
+    }
+    public void decreaseMorale(int howMuch)
+    {
+         if(morale - howMuch >= 0)
+        {
+            morale -= howMuch;
+        }
+        else {
+            morale = 0;
+        }
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public boolean getStatus()
+    {
+        return isAdult;
+    }
+    public int getEnergyLvl()
+    {
+        return energy;
+    }
+    public int getMoraleLvl()
+    {
+        return morale;
     }
 }
