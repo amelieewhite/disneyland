@@ -7,10 +7,10 @@
  */
 public class Person
 {
-    String name;
-    boolean isAdult;
-    int morale;
-    int energy;
+    private String name;
+    private boolean isAdult;
+    private int morale;
+    private int energy;
 
     public Person(String n, boolean iA)
     {
@@ -61,6 +61,8 @@ public class Person
             morale = 0;
         }
     }
+
+    // getters
     public String getName()
     {
         return name;
