@@ -5,7 +5,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Item extends Store {
+public class Item Store {
     String name = "";
     double price = 0.00;
     String need = "";
@@ -18,11 +18,11 @@ public class Item extends Store {
 
      public double getPrice()
     {
-     
+         return price;
     }
       public String getName()
     {
-     
+         return name;
     }
 
       public String getNeed()
