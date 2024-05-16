@@ -10,7 +10,7 @@ public class Ride
         waitTime = time;
         moraleBoost = boost;
     }
-
+//Getters
     public String getName()
     {
         return name;
