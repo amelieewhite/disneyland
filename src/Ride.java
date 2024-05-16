@@ -1,19 +1,26 @@
-/**
- * Write a description of class ride here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Ride
 {
-    double queueTime = 0.00;
-    String name = "";
-    boolean heightRq = false;
+    private String name;
+    private int waitTime
+    private int moraleBoost;
     
-    public Ride(String n, double waitTime, boolean hR)
+    public Ride(String n, int time, int boost)
     {
         name = n;
-        queueTime = waitTime;
-        heightRq = hR;
+        waitTime = time;
+        moraleBoost = boost;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+    public int getWaitTime()
+    {
+        return waitTime;
+    }
+    public int getMoraleBoost()
+    {
+        return moraleBoost;
     }
 }
