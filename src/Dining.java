@@ -5,5 +5,8 @@ public class Dining
     public void sellItem(Food f)
     {
       budget -= f.getPrice();
+      energy += f.getEnergy();
+    }
+  }
       
     
