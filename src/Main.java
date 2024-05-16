@@ -1,9 +1,6 @@
-/**
- * Write a description of class main here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+import java.util.Scanner;
+import javax.swing.JFrame;
+import javax.swing.JButton;
 public class Main
 {
     
