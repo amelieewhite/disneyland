@@ -11,6 +11,7 @@ public class Person
     private boolean isAdult;
     private int morale;
     private int energy;
+    private double budget;
 
     public Person(String n, boolean iA)
     {
@@ -18,6 +19,16 @@ public class Person
         isAdult = iA;
         morale = 100;
         energy = 100;
+        if(isAdult)
+        {
+
+            budget = $100;
+        }
+        else
+        {
+
+            budget = $50;
+        }
     }
 
     public void decreaseEnergy(int howMuch)
