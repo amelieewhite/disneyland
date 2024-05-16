@@ -2,12 +2,11 @@ import java.util.*;
 public class Store
 {
    private String name;
-   String storeType = "";
-   ArrayList items = new ArrayList<Item>();
+   private ArrayList<Item> items;
    
-   public Store(String n, String sT)
+   public Store(String n)
    {
-       name = n;
-       storeType = sT;
+      name = n;
+      items = new ArrayList<Item>();
    }
 }
