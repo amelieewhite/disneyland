@@ -12,6 +12,7 @@ public class Person
     private int morale;
     private int energy;
     private double budget;
+    private double ticketPrice;
 
     public Person(String n, boolean iA)
     {
@@ -22,12 +23,15 @@ public class Person
         if(isAdult)
         {
 
-            budget = $100;
+            budget = 100.0;
+            ticketPrice = 50.0;
         }
         else
         {
 
-            budget = $50;
+            budget = 50.0;
+            ticketPrice = 25.0;
+            // prices are just place holders for now, will be updated 
         }
     }
 
@@ -89,5 +93,13 @@ public class Person
     public int getMoraleLvl()
     {
         return morale;
+    }
+    public double getBudget()
+    {
+        return budget;
+    }
+    public double getTicketPrice()
+    {
+        return ticketPrice;
     }
 }
