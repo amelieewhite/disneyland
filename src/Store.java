@@ -1,14 +1,7 @@
-
-/**
- * Write a description of class store here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 import java.util.*;
 public class Store
 {
-   String name = "";
+   private String name;
    String storeType = "";
    ArrayList items = new ArrayList<Item>();
    
