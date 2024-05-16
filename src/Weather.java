@@ -7,8 +7,8 @@
  */
 public class Weather
 {
-    double temp;
-    String conditions = "";
+    private double temp;
+    private String conditions;
 
     public Weather(double t, String c)
     {
