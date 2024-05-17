@@ -43,6 +43,16 @@ public class Ride
         {
             return "";
         }
+
+        if(moraleBoost-- >= 0)
+        {
+            moraleBoost--;
+        }
+        else
+        {
+            morale = 0;
+        }
+    }
 //Getters
     public String getName()
     {
