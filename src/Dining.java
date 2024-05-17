@@ -1,6 +1,13 @@
 public class Dining
   {
-    Arraylist<Food> menu = new ArrayList<Food>();
+    private String name;
+    private Arraylist<Food> menu;
+
+    public Dining(String n)
+    {
+      name = n;
+      menu = new Arraylist<Food>();
+    }
 
     public void buyItem(Food f)
     {
