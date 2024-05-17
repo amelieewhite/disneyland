@@ -20,17 +20,14 @@ public class Person
         isAdult = iA;
         morale = 100;
         energy = 100;
+        budget = 100.0;
         if(isAdult)
         {
-
-            budget = 100.0;
-            ticketPrice = 50.0;
+            ticketPrice = 170.0;
         }
         else
         {
-
-            budget = 50.0;
-            ticketPrice = 25.0;
+            ticketPrice = 130.0;
             // prices are just place holders for now, will be updated 
         }
     }
