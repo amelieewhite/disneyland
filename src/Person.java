@@ -11,7 +11,6 @@ public class Person
     private boolean isAdult;
     private int morale;
     private int energy;
-    private double budget;
     private double ticketPrice;
 
     public Person(String n, boolean iA)
@@ -20,7 +19,6 @@ public class Person
         isAdult = iA;
         morale = 100;
         energy = 100;
-        budget = 100.0;
         if(isAdult)
         {
             ticketPrice = 170.0;
@@ -90,10 +88,6 @@ public class Person
     public int getMoraleLvl()
     {
         return morale;
-    }
-    public double getBudget()
-    {
-        return budget;
     }
     public double getTicketPrice()
     {
