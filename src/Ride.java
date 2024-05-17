@@ -3,8 +3,7 @@ public class Ride
     private String name;
     private int waitTime
     private int moraleBoost;
-    private int negConsequence;
-    private int posConsequence;
+
     
     public Ride(String n, int time, int boost)
     {
