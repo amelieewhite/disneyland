@@ -5,7 +5,8 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Item Store {
+public class Item 
+    {
     String name = "";
     double price = 0.00;
     String need = "";
