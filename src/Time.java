@@ -14,6 +14,7 @@ public class Time
       int count = 0;
 
       // method to make sure minutes don't go over 59? like if its 11:30 and you add an hour 45 you want it to be 1:15 not 12:75
+      minutes += m;
 
       if(minutes >= 60)
       {
@@ -23,7 +24,6 @@ public class Time
       else
       {
         hours += h;
-        minutes += m;
       }
     }
   }
