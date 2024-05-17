@@ -8,9 +8,9 @@ import java.util.*;
 public class Lands
 {
     private String name;
-    ArrayList Stores = new ArrayList<Store>();
-    ArrayList Rides = new ArrayList<Ride>();
-    ArrayList Events = new ArrayList<Event>();
+    ArrayList<Store> Stores = new ArrayList<Store>();
+    ArrayList<Ride> Rides = new ArrayList<Ride>();
+    ArrayList<Event> Events = new ArrayList<Event>();
     
     public Lands()
     {
