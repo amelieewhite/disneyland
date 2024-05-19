@@ -14,9 +14,10 @@ public class Lands
     private ArrayList<Dining> dining;
     private String description;
 
-    public Lands(String n)
+    public Lands(String n, String d)
     {
         name = n;
+        description = d;
         stores = new ArrayList<Store>();
         rides = new ArrayList<Ride>();
         events = new ArrayList<Event>();
@@ -26,10 +27,6 @@ public class Lands
     public Lands()
     {
         name = "blank";
-    }
-
-    public addDescription(String d){
-        description = d;
     }
 
     public String getDescription(){
