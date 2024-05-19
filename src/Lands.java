@@ -12,6 +12,7 @@ public class Lands
     private ArrayList<Ride> rides;
     private ArrayList<Event> events;
     private ArrayList<Dining> dining;
+    private String description;
 
     public Lands(String n)
     {
@@ -26,6 +27,15 @@ public class Lands
     {
         name = "blank";
     }
+
+    public addDescription(String d){
+        description = d;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
     public void addStore(Store s)
     {
         Stores.add(s);
