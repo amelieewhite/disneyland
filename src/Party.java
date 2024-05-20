@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Party
 {
   private double budget;
@@ -8,15 +10,15 @@ public Party(ArrayList<Person> p)
   party = p;
   budget = p.size()*100;
 }
-public addToParty(Person p)
+public void addToParty(Person p)
 {
   party.add(p);
 }
-public removeFromParty(Person p)
+public void removeFromParty(Person p)
 {
   party.remove(p);
 }
-public decreaseBudget(double howMuch)
+public void decreaseBudget(double howMuch)
 {
   if(budget - howMuch >= 0)
   {
@@ -26,5 +28,6 @@ public decreaseBudget(double howMuch)
   {
     budget = 0.0;
   }
+}
 }
 

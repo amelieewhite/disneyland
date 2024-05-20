@@ -7,42 +7,44 @@
 import java.util.*;
 public class Lands
 {
-    private String name;
     private ArrayList<Store> stores;
     private ArrayList<Ride> rides;
-    private ArrayList<Event> events;
+    private ArrayList<Activities> events;
     private ArrayList<Dining> dining;
     private String description;
+    private String landName;
 
     public Lands(String n, String d)
     {
-        name = n;
+        landName = n;
         description = d;
         stores = new ArrayList<Store>();
         rides = new ArrayList<Ride>();
-        events = new ArrayList<Event>();
+        events = new ArrayList<Activities>();
         dining = new ArrayList<Dining>();
     }
-    
-    public Lands()
-    {
-        name = "blank";
-    }
-
     public String getDescription(){
         return description;
+    }
+    public String getName()
+    {
+        return landName;
     }
 
     public void addStore(Store s)
     {
-        Stores.add(s);
+        stores.add(s);
     }
     public void addRide(Ride r)
     {
-        Rides.add(r);
+        rides.add(r);
     }
-    public void addEvent(Event e)
+    public void addEvent(Activities e)
     {
-        Events.add(e);
+        events.add(e);
+    }
+    public void addDining(Dining d)
+    {
+        dining.add(d);
     }
 }
