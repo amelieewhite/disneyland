@@ -11,7 +11,7 @@ public class Main
     private double costs;
 
     JFrame mainFrame = new JFrame("Disneyland Game");
-    mainFrame.setBounds(700,700);
+    mainFrame.setSize(700,700);
     mainFrame.setLayout(null);
     mainFrame.setVisibility(true);
 
@@ -21,9 +21,10 @@ public class Main
         costs += p.getTicketPrice();
     }
 
-    public void displayMenu()
+    public void displayMenuBar()
     {
         JPanel pan = new JPanel();
+        pan.setBounds(0,0,700,200);
         pan.setBackground(Color.blue);
     }
         
