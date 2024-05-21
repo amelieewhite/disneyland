@@ -39,7 +39,7 @@ public class Main
             System.out.println("Great! Your party's budget for the day will be $" + part.getBudget() + ". Good luck!");
             for(int i = 0; i < part.getSize(); i++)
             {
-                System.out.println(party.get(i));
+                System.out.println(party.get(i).getName());
 
             }
     
