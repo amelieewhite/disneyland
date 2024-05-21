@@ -106,13 +106,20 @@ public class Main
         for(int i = 1; i <= partySize; i++)
         {
             String name = "";
+            boolean isAdult; 
             while(name.equals(""))
             {
                 System.out.println("What is person " + i + "'s name?");
                 name = scan.nextLine();
             }
-            System.out.println("Are they over 18?");
-            boolean isAdult = scan.nextBoolean();
+            System.out.println("Are they over 18? \n Yes \n No");
+            if(scan.nextLine().equals("Yes") || scan.nextLine().equals("yes"))
+            {
+                isAdult = true;
+            }
+            else{
+                isAdult = false;
+            }
             System.out.println("Great, person " + i + "'s name is " + name + ", and adult: " + isAdult);
             Person p = new Person(name, isAdult);
             party.add(p);

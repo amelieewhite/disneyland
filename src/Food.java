@@ -3,6 +3,7 @@ public class Food
     private String name;
     private int energy;
     private double price;
+    
 
     public Food(String n, int e, double p)
     {

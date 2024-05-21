@@ -1,7 +1,7 @@
 public class Ride
 {
     private String name;
-    private int waitTime
+    private int waitTime;
     private int moraleBoost;
 
     

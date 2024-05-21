@@ -81,6 +81,10 @@ public class Person
     {
         return isAdult;
     }
+    public void setStatus(boolean adult)
+    {
+        isAdult = adult;
+    }
     public int getEnergyLvl()
     {
         return energy;

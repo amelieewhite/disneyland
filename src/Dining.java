@@ -1,19 +1,32 @@
+
+import java.util.*;
 public class Dining
   {
     private String name;
-    private Arraylist<Food> menu;
+    private ArrayList<Food> menu;
+    double totalCost;
+    double totalEnergy;
 
     public Dining(String n)
     {
       name = n;
-      menu = new Arraylist<Food>();
+      menu = new ArrayList<Food>();
     }
 
     public void buyItem(Food f)
     {
-      budget -= f.getPrice();
-      energy += f.getEnergy();
+      totalCost += f.getPrice();
+      totalEnergy += f.getEnergy();
     }
-  }
+    public double getTC()
+    {
+      return totalCost;
+    }
+    public double getTE()
+    {
+      return totalEnergy;
+    }
+    }
+  
       
     
