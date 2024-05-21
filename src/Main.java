@@ -33,12 +33,14 @@ public class Main
             Person p = new Person(name, isAdult);
             party.add(p);
             }
+
+            Party part = new Party(party);
+
+            System.out.println("Great! Your party's budget for the day will be $" + part.getBudget() + ". Good luck!");
+    
         }
 
-        Party part = new Party(party);
-
-        System.out.println("Great! Your party's budget will be $" + part.getBudget() + "!");
-
+       
 
 
     }
