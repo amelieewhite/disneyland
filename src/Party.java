@@ -29,5 +29,10 @@ public void decreaseBudget(double howMuch)
     budget = 0.0;
   }
 }
+public double getBudget()
+{
+  return budget;
+  }
 }
+
 
