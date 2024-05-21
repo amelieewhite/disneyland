@@ -33,6 +33,10 @@ public double getBudget()
 {
   return budget;
   }
+  public int getSize()
+{
+  return party.size();
+  }
 }
 
 

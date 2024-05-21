@@ -29,7 +29,7 @@ public class Main
             }
             System.out.println("Are they over 18?");
             boolean isAdult = scan.nextBoolean();
-            System.out.println("Great, person " + i + "'s name is " + name + "and adult: " + isAdult);
+            System.out.println("Great, person " + i + "'s name is " + name + ", and adult: " + isAdult);
             Person p = new Person(name, isAdult);
             party.add(p);
             }
@@ -37,6 +37,11 @@ public class Main
             Party part = new Party(party);
 
             System.out.println("Great! Your party's budget for the day will be $" + part.getBudget() + ". Good luck!");
+            for(int i = 0; i < part.getSize(); i++)
+            {
+                System.out.println(party.get(i));
+
+            }
     
         }
 
@@ -45,4 +50,3 @@ public class Main
 
     }
 
-}
