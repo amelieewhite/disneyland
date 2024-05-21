@@ -74,7 +74,7 @@ public class Park
         {
             for(int j = 0; j < map[i].length; j++)
             {
-                if(map[i][j].getName().equals(where))
+                if(map[i][j] != null && map[i][j].getName().equals(where))
                 {
                     currLocation.move(i, j);
                 }
