@@ -3,16 +3,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Main
 {
-    Park disney = new Park();
-
+    static Park disneyland = new Park();
+    static Location currLocation = new Location();
     static int partySize = 0;
     static Scanner scan = new Scanner(System.in);
     static ArrayList<Person> party = new ArrayList<Person>();
+    
+    
 
     public static void displayMenu()
     {
         boolean b = false;
-        System.out.println("You are currently in _. What would you like to do?");
+        System.out.println("What would you like to do?");
         while(!b)
         {
             System.out.println("Shop \n Dine \n Go on a ride \n See activities \n leave");
@@ -91,6 +93,7 @@ public class Main
 
     public static void main(String[] args)
     {
+        currLocation = disneyland.getPartyLoc();
         System.out.println("Hello and welcome to Disneyland! How many in your party?");
         partySize = scan.nextInt();
         while(partySize > 8)

@@ -5,15 +5,18 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-import java.util.*;
 public class Park
 {
     Weather w;
     Lands[][] map = new Lands[3][3];
+    Location currLocation;
     
     
     public Park()
     {
+        currLocation = new Location();
+
+ 
         // entrance
         map[2][1] = new Lands("Entrance", "Main entrance to the park");
 
@@ -42,9 +45,29 @@ public class Park
         // toontown
         map[0][2] = new Lands("Toontown", "desc.");
 
+
         
 
 
         
     }
+
+    public Lands[][] getMap()
+    {
+        return map;
+    }
+    public String getLandName(int row, int col)
+    {
+        return map[row][col].getName();
+    }
+    public String getLandDesc(int row, int col)
+    {
+        return map[row][col].getDescription();
+    }
+    public Location getPartyLoc()
+    {
+        return currLocation;
+    }
+    
+    
 }
