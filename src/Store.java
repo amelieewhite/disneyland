@@ -9,4 +9,9 @@ public class Store
       name = n;
       items = new ArrayList<Item>();
    }
+
+   public String getName()
+   {
+    return name;
+   }
 }

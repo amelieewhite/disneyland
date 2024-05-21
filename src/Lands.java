@@ -47,4 +47,11 @@ public class Lands
     {
         dining.add(d);
     }
+    public void showStores()
+    {
+        for(int i =0; i < stores.size(); i++)
+        {
+            System.out.println(stores.get(i).getName());
+        }
+    }
 }
