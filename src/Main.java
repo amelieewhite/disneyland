@@ -13,8 +13,8 @@ public class Main
     public static void displayMenu()
     {
         boolean b = false;
-        disneyland.getPartyLoc();
-        System.out.println("What would you like to do?");
+        disneyland.move("Main Street");
+        System.out.println("You are currently in " + disneyland.getPartyLoc() + ". What would you like to do?");
         while(!b)
         {
             System.out.println("Shop \n Dine \n Go on a ride \n See activities \n leave");
@@ -106,19 +106,16 @@ public class Main
         for(int i = 1; i <= partySize; i++)
         {
             String name = "";
-            boolean isAdult; 
+            boolean isAdult = false; 
             while(name.equals(""))
             {
                 System.out.println("What is person " + i + "'s name?");
                 name = scan.nextLine();
             }
-            System.out.println("Are they over 18? \n Yes \n No");
-            if(scan.nextLine().equals("Yes") || scan.nextLine().equals("yes"))
+            System.out.println("Are they over 18? \n True \n False");
+            if(scan.nextBoolean())
             {
                 isAdult = true;
-            }
-            else{
-                isAdult = false;
             }
             System.out.println("Great, person " + i + "'s name is " + name + ", and adult: " + isAdult);
             Person p = new Person(name, isAdult);

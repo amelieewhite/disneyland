@@ -8,7 +8,7 @@
 public class Park
 {
     Weather w;
-    Lands[][] map = new Lands[3][3];
+    static Lands[][] map = new Lands[3][3];
     Location currLocation;
     
     
@@ -64,9 +64,9 @@ public class Park
     {
         return map[row][col].getDescription();
     }
-    public Location getPartyLoc()
+    public String getPartyLoc()
     {
-        return currLocation;
+        return map[currLocation.getRow()][currLocation.getCol()].getName();
     }
     public void move(String where)
     {
