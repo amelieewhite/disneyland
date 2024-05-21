@@ -2,13 +2,9 @@ public class Location
 {
     int row; 
     int col;
-    Park disney;
-    Lands[][] map;
 
     public Location()
     {
-        disney = new Park();
-        map = disney.getMap();
         row = 2;
         col = 1;
     }
@@ -23,6 +19,11 @@ public class Location
     public void getLocation()
     {
         System.out.println("You are currently in: " + map[row][col].getName());
+    }
+    public void move(int r, int c)
+    {
+        row = r;
+        col = c;
     }
     
 

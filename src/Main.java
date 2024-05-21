@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main
 {
     static Park disneyland = new Park();
-    static Location currLocation = new Location();
     static int partySize = 0;
     static Scanner scan = new Scanner(System.in);
     static ArrayList<Person> party = new ArrayList<Person>();
@@ -14,6 +13,7 @@ public class Main
     public static void displayMenu()
     {
         boolean b = false;
+        disneyland.getPartyLoc();
         System.out.println("What would you like to do?");
         while(!b)
         {
@@ -93,7 +93,7 @@ public class Main
 
     public static void main(String[] args)
     {
-        currLocation = disneyland.getPartyLoc();
+        disneyland.getPartyLoc();
         System.out.println("Hello and welcome to Disneyland! How many in your party?");
         partySize = scan.nextInt();
         while(partySize > 8)

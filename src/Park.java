@@ -68,6 +68,23 @@ public class Park
     {
         return currLocation;
     }
+    public void move(String where)
+    {
+        for(int i = 0; i < map.length; i++)
+        {
+            for(int j = 0; j < map[i].length; j++)
+            {
+                if(map[i][j].getName().equals(where))
+                {
+                    currLocation.move(i, j);
+                }
+            }
+        }
+        }
+    
+        
+
+    }
     
     
-}
+
