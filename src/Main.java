@@ -17,11 +17,11 @@ public class Main
         System.out.println("You are currently in " + disneyland.getPartyLoc() + ". What would you like to do?");
         while(!b)
         {
-            System.out.println("Shop \n Dine \n Go on a ride \n See activities \n leave");
-            String choice = scan.nextLine();
-            if(choice.equals("Shop"))
+            System.out.println("1. Shop \n 2. Dine \n 3. Go on a ride \n 4. See activities \n 5. Move to another land \n 6. Leave");
+            int choice = scan.nextInt();
+            if(choice == 1)
             {
-                System.out.println("You have chosen shop. Here is a list of shops in _.");
+                System.out.println("You have chosen shop. Here is a list of shops in " + disneyland.getPartyLoc());
                 System.out.println("shop 1 \n shop 2 \n shop 3");
                 System.out.println("Which would you like to explore?");
                 String nextChoice = scan.nextLine();
@@ -31,9 +31,9 @@ public class Main
 
                 }
                 }
-            else if(choice.equals("Dine"))
+            else if(choice == 2)
             {
-                System.out.println("You have chosen dine. Here is a list of restaurants in _.");
+                System.out.println("You have chosen dine. Here is a list of restaurants in " + disneyland.getPartyLoc());
                 System.out.println("dine 1 \n dine 2 \n dine 3");
                 System.out.println("Which would you like to go to?");
                 String nextChoice = scan.nextLine();
@@ -43,9 +43,9 @@ public class Main
                 }
 
             }
-            else if(choice.equals("Go on a ride"))
+            else if(choice == 3)
             {
-                System.out.println("You have chosen ride. Here is a list of rides in _.");
+                System.out.println("You have chosen ride. Here is a list of rides in " + disneyland.getPartyLoc());
                 System.out.println("ride 1 \n ride 2 \n ride 3");
                 System.out.println("Which would you like to go on?");
                 String nextChoice = scan.nextLine();
@@ -55,9 +55,9 @@ public class Main
                 }
 
             }
-            else if(choice.equals("See activities"))
+            else if(choice == 4)
             {
-                System.out.println("You have chosen see activities. Here is a list of events in _.");
+                System.out.println("You have chosen see activities. Here is a list of events in " + disneyland.getPartyLoc());
                 System.out.println("event 1 \n event 2 \n event 3");
                 System.out.println("Which would you like to go to?");
                 String nextChoice = scan.nextLine();
@@ -67,11 +67,35 @@ public class Main
                 }
 
             }
-            else if(choice.equals("leave"))
+            else if(choice == 5)
             {
-                System.out.println("Are you sure? If you leave, you cannot reenter and the game will end.");
-                String nextChoice = scan.nextLine();
-                if(nextChoice.equals("yes"))
+                int counter = 1;
+                System.out.println("You have chosen move to another land. Here is a list of lands you may move to:" );
+                for(int i = 0; i < disneyland.getMap().length; i++)
+                {
+                    for(int j = 0; j < (disneyland.getMap())[i].length; j++)
+                    {
+                        if(disneyland.getMap()[i][j] != null && !(disneyland.getMap()[i][j].getName().equals(disneyland.getPartyLoc())))
+                        {
+                            System.out.println(counter + ". " + disneyland.getMap()[i][j].getName());
+                            counter++;
+
+                        }
+                }
+                System.out.println("Keep in mind that this will take energy. Where would you like to go?");
+                int nextNextChoice = scan.nextInt();
+                if(nextNextChoice == 1)
+                {
+                    System.out.println("testing");
+                }
+
+            }
+        }
+            else if(choice == 6)
+            {
+                System.out.println("Are you sure? If you leave, you cannot reenter and the game will end. \n 1. Yes \n 2. No");
+                int nextChoice = scan.nextInt();
+                if(nextChoice == 1)
                 {
                     System.out.println("Thank you for playing");
                     b = true;
