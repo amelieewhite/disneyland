@@ -123,6 +123,12 @@ public class Main
             disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showStores();
 
         }
+    public static void displayDineMenu()
+        {
+            System.out.println("You have chosen dine. Here is a list of dining options in " + disneyland.getPartyLoc());
+            disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showStores();
+
+        }
 
 
     public static void main(String[] args)
