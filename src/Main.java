@@ -73,7 +73,8 @@ public class Main
             }
             else if(choice == 5)
             {
-                int counter = 1;
+                 \*
+                     int counter = 1;
                 System.out.println("You have chosen move to another land. Here is a list of lands you may move to:" );
                 for(int i = 0; i < disneyland.getMap().length; i++)
                 {
@@ -93,10 +94,14 @@ public class Main
                     System.out.println("testing");
                 }
 
+
+                *\
+                
             }
         }
             else if(choice == 6)
             {
+               
                 System.out.println("Are you sure? If you leave, you cannot reenter and the game will end. \n 1. Yes \n 2. No");
                 int nextChoice = scan.nextInt();
                 if(nextChoice == 1)
@@ -126,7 +131,36 @@ public class Main
     public static void displayDineMenu()
         {
             System.out.println("You have chosen dine. Here is a list of dining options in " + disneyland.getPartyLoc());
-            disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showStores();
+            disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showDining();
+
+        }
+    public static void displayActivitiesMenu()
+        {
+            System.out.println("You have chosen activities. Here is a list of activities in " + disneyland.getPartyLoc());
+            disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showEvents();
+
+        }
+    public static void displayLandsMenu()
+        {
+            System.out.println("You have chosen move to another land. Here is a list of lands you may move to from " + disneyland.getPartyLoc());
+             for(int i = 0; i < disneyland.getMap().length; i++)
+                {
+                    for(int j = 0; j < (disneyland.getMap())[i].length; j++)
+                    {
+                        if(disneyland.getMap()[i][j] != null && !(disneyland.getMap()[i][j].getName().equals(disneyland.getPartyLoc())))
+                        {
+                            System.out.println(counter + ". " + disneyland.getMap()[i][j].getName());
+                            counter++;
+
+                        }
+                }
+                System.out.println("Keep in mind that this will take energy. Where would you like to go?");
+                int nextNextChoice = scan.nextInt();
+                if(nextNextChoice == 1)
+                {
+                    System.out.println("testing");
+                }
+        
 
         }
 
