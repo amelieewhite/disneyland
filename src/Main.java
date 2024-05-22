@@ -73,7 +73,7 @@ public class Main
             }
             else if(choice == 5)
             {
-                 \*
+                 /*
                      int counter = 1;
                 System.out.println("You have chosen move to another land. Here is a list of lands you may move to:" );
                 for(int i = 0; i < disneyland.getMap().length; i++)
@@ -95,7 +95,7 @@ public class Main
                 }
 
 
-                *\
+                */
                 
             }
         }
