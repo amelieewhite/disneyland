@@ -47,32 +47,20 @@ public class Lands
     {
         dining.add(d);
     }
-    public void showStores()
+    public ArrayList<Store> getStores()
     {
-        for(int i =0; i < stores.size(); i++)
-        {
-            System.out.println((i+1) + ". " + stores.get(i).getName());
-        }
+        return stores;
     }
-    public void showDining()
+    public ArrayList<Dining> getDining()
     {
-        for(int i =0; i < dining.size(); i++)
-        {
-            System.out.println((i+1) + ". " + dining.get(i).getName());
-        }
+        return dining;
     }
-    public void showRides()
+    public ArrayList<Activities> getActivities()
     {
-        for(int i =0; i < rides.size(); i++)
-        {
-            System.out.println((i+1) + ". " + rides.get(i).getName());
-        }
+        return events;
     }
-    public void showEvents()
+    public ArrayList<Ride> getRides()
     {
-        for(int i =0; i < events.size(); i++)
-        {
-            System.out.println((i+1) + ". " + events.get(i).getName());
-        }
+        return rides;
     }
 }
