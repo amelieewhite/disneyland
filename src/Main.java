@@ -37,7 +37,8 @@ public class Main
                 }
             else if(choice == 2)
             {
-                System.out.println("You have chosen dine. Here is a list of restaurants in " + disneyland.getPartyLoc());
+                /*
+                 *  System.out.println("You have chosen dine. Here is a list of restaurants in " + disneyland.getPartyLoc());
                 System.out.println("dine 1 \n dine 2 \n dine 3");
                 System.out.println("Which would you like to go to?");
                 String nextChoice = scan.nextLine();
@@ -46,10 +47,14 @@ public class Main
                     System.out.println("testing");
                 }
 
+                 */
+                displayDineMenu();
+               
             }
             else if(choice == 3)
             {
-                System.out.println("You have chosen ride. Here is a list of rides in " + disneyland.getPartyLoc());
+                /*
+                 * System.out.println("You have chosen ride. Here is a list of rides in " + disneyland.getPartyLoc());
                 System.out.println("ride 1 \n ride 2 \n ride 3");
                 System.out.println("Which would you like to go on?");
                 String nextChoice = scan.nextLine();
@@ -57,11 +62,14 @@ public class Main
                 {
                     System.out.println("testing");
                 }
+                 */
+                displayRidesMenu();
 
             }
             else if(choice == 4)
             {
-                System.out.println("You have chosen see activities. Here is a list of events in " + disneyland.getPartyLoc());
+                /*
+                 * System.out.println("You have chosen see activities. Here is a list of events in " + disneyland.getPartyLoc());
                 System.out.println("event 1 \n event 2 \n event 3");
                 System.out.println("Which would you like to go to?");
                 String nextChoice = scan.nextLine();
@@ -69,6 +77,9 @@ public class Main
                 {
                     System.out.println("testing");
                 }
+                 */
+                
+                 displayActivitiesMenu();
 
             }
             else if(choice == 5)
@@ -96,9 +107,10 @@ public class Main
 
 
                 */
+
+                displayLandsMenu();
                 
             }
-        }
             else if(choice == 6)
             {
                
@@ -125,7 +137,7 @@ public class Main
         public static void displayShopMenu()
         {
             System.out.println("You have chosen shop. Here is a list of shops in " + disneyland.getPartyLoc());
-            disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showStores();
+            System.out.println(disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showStores());
 
         }
     public static void displayDineMenu()
@@ -140,8 +152,15 @@ public class Main
             disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showEvents();
 
         }
+        public static void displayRidesMenu()
+        {
+            System.out.println("You have chosen to go on a ride. Here is a list of rides in " + disneyland.getPartyLoc());
+            disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showRides();
+
+        }
     public static void displayLandsMenu()
         {
+            int counter = 0;
             System.out.println("You have chosen move to another land. Here is a list of lands you may move to from " + disneyland.getPartyLoc());
              for(int i = 0; i < disneyland.getMap().length; i++)
                 {
