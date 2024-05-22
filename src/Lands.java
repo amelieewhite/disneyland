@@ -54,4 +54,25 @@ public class Lands
             System.out.println((i+1) + ". " + stores.get(i).getName());
         }
     }
+    public void showDining()
+    {
+        for(int i =0; i < dining.size(); i++)
+        {
+            System.out.println((i+1) + ". " + dining.get(i).getName());
+        }
+    }
+    public void showRides()
+    {
+        for(int i =0; i < rides.size(); i++)
+        {
+            System.out.println((i+1) + ". " + rides.get(i).getName());
+        }
+    }
+    public void showEvents()
+    {
+        for(int i =0; i < events.size(); i++)
+        {
+            System.out.println((i+1) + ". " + events.get(i).getName());
+        }
+    }
 }
