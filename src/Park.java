@@ -68,6 +68,10 @@ public class Park
     {
         return map[currLocation.getRow()][currLocation.getCol()].getName();
     }
+    public Location getPartyLocation()
+    {
+        return currLocation;
+    }
     public void move(String where)
     {
         for(int i = 0; i < map.length; i++)

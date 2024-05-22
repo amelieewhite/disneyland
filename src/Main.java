@@ -7,6 +7,7 @@ public class Main
     static int partySize = 0;
     static Scanner scan = new Scanner(System.in);
     static ArrayList<Person> party = new ArrayList<Person>();
+
     
     
 
@@ -21,8 +22,8 @@ public class Main
             int choice = scan.nextInt();
             if(choice == 1)
             {
-                System.out.println("You have chosen shop. Here is a list of shops in " + disneyland.getPartyLoc());
-                System.out.println("shop 1 \n shop 2 \n shop 3");
+                /*
+                 *   System.out.println("shop 1 \n shop 2 \n shop 3");
                 System.out.println("Which would you like to explore?");
                 String nextChoice = scan.nextLine();
                 if(nextChoice.equals("shop 1"))
@@ -30,6 +31,9 @@ public class Main
                     System.out.println("testing");
 
                 }
+                 */
+                displayShopMenu();
+              
                 }
             else if(choice == 2)
             {
@@ -113,6 +117,12 @@ public class Main
             }
         }
     
+        public static void displayShopMenu()
+        {
+            System.out.println("You have chosen shop. Here is a list of shops in " + disneyland.getPartyLoc());
+            disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showStores();
+
+        }
 
 
     public static void main(String[] args)

@@ -51,7 +51,7 @@ public class Lands
     {
         for(int i =0; i < stores.size(); i++)
         {
-            System.out.println(stores.get(i).getName());
+            System.out.println((i+1) + ". " + stores.get(i).getName());
         }
     }
 }
