@@ -137,7 +137,7 @@ public class Main
         public static void displayShopMenu()
         {
             System.out.println("You have chosen shop. Here is a list of shops in " + disneyland.getPartyLoc());
-            System.out.println(disneyland.getMap()[disneyland.getPartyLocation().getRow()][disneyland.getPartyLocation().getCol()].showStores());
+            disneyland.getPartyLocation().showStores();
 
         }
     public static void displayDineMenu()
