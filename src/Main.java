@@ -41,16 +41,8 @@ public class Main {
             String choice = ChooseOptions(options, "You are currently in " + loc.getName() + ". What would you like to do?");
             if (choice.equals("Shop")) {
                 String shop = ChooseOptions(loc.getStoreNames(), "Which of these stores would you like to go in?");
-                
-  
-                System.out.println("You have chosen shop. Here is a list of shops in _.");
-                System.out.println("shop 1 \n shop 2 \n shop 3");
-                System.out.println("Which would you like to explore?");
-                String nextChoice = scan.nextLine();
-                if (nextChoice.equals("shop 1")) {
-                    System.out.println("testing");
+        
 
-                }
             } else if (choice.equals("Dine")) {
                 System.out.println("You have chosen dine. Here is a list of restaurants in _.");
                 System.out.println("dine 1 \n dine 2 \n dine 3");
@@ -93,19 +85,37 @@ public class Main {
 
         }
     }
+    public static void displayStoreMenu(Store s)
+    {
+        boolean b = false;
 
-    public static void main(String[] args) {
-        Boolean debug = true;
-        if (debug == true) {
-            disneyland.getPartyLoc();
-            partySize = 2;
-            Person p = new Person("hat", true);
-            party.add(p);
-            Person o = new Person("bat", true);
-            party.add(o);
-            Party part = new Party(party);
-            displayMenu();
+        while (!b) {
+            String[] options = {"Browse Items", "Purchase Items", "Leave"};
+            String choice = ChooseOptions(options, "Welcome to + " + s.getName() + "! How can I help you?");
+            if (choice.equals("Browse Items")) {
+                String shop = ChooseOptions(s.getItemList(), "What would you like to look at?");
+            }
+            else if (choice.equals("Purchase Items")) {
+                if(s.getBasketTotal() > 0)
+                {
+                    String[] options2 = {"Buy", "Never mind"};
+                    String choice2 = ChooseOptions(options2, "Your total will be " + s.getBasketTotal() + ". Proceed? \n Yes \n No");
+                    {
+                        if(choice2.toLowerCase().equals("yes"))
+                        {
+                            
+                        }
+                    }
+                }
+                String shop = ChooseOptions(s.getItemList(), "What would you like to look at?");
+            }
         }
+
+
+    }
+
+    public static void main(String[] args) 
+    {
         disneyland.getPartyLoc();
         System.out.println("Hello and welcome to Disneyland! How many in your party?");
         partySize = scan.nextInt();
