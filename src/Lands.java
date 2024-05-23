@@ -51,9 +51,24 @@ public class Lands
     {
         return stores;
     }
+    public String[] getStoreNames(){
+        String [] names = new String[stores.size()];
+        for (int i = 0 ; i < stores.size() ; i++){
+            names[i] = stores.get(i).getName();
+        }
+        return names;
+    }
     public ArrayList<Dining> getDining()
     {
         return dining;
+    }
+
+    public String[] getDiningNames(){
+        String [] names = new String[dining.size()];
+        for (int i = 0 ; i < dining.size() ; i++){
+            names[i] = dining.get(i).getName();
+        }
+        return names;
     }
     public ArrayList<Activities> getActivities()
     {

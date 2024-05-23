@@ -22,7 +22,9 @@ public class Park
 
         // main street
         map[1][1] = new Lands("Main Street", "Main street USA, hub of shops");
-
+        map[1][1].addStore((new Store("a shop")));
+        map[1][1].addStore((new Store("a shoop")));
+        map[1][1].addStore((new Store("a smhoop")));
         // fantasyland
         map[0][1] = new Lands("Fantasyland", "fantasyland woo");
         map[0][1].addRide(new Ride("It's a Small World", 10, 5));

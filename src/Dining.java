@@ -18,6 +18,10 @@ public class Dining
       totalCost += f.getPrice();
       totalEnergy += f.getEnergy();
     }
+    public String getName()
+    {
+      return name;
+    }
     public double getTC()
     {
       return totalCost;
