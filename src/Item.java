@@ -26,7 +26,7 @@ public class Item
          return name;
     }
 
-      public String getDescrip()
+      public String getDescription()
     {
         return desc;
     }

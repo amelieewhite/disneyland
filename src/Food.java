@@ -1,27 +1,10 @@
-public class Food
+public class Food extends Item
   {
-    private String name;
-    private int energy;
-    private double price;
-    
 
-    public Food(String n, int e, double p)
+    public Food(String n, double p, String d )
     {
-      name = n;
-      energy = e;
-      price = p;
+      super(n,p,d);
     }
 
-    public String getName()
-    {
-      return name;
-    }
-    public int getEnergy()
-    {
-      return energy;
-    }
-    public double getPrice()
-    {
-      return price;
-    }
+   
   }

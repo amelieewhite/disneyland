@@ -1,12 +1,14 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
     static Park disneyland = new Park();
     static int partySize = 0;
     static Scanner scan = new Scanner(System.in);
-    static ArrayList<Person> party = new ArrayList<Person>();
+    static ArrayList<Person> people = new ArrayList<Person>();
+    static Party party;
 
     /*
      * Method for selecting from choices
@@ -22,6 +24,14 @@ public class Main {
             for (int i = 0; i < options.length; i++) {
                 if (choice.toLowerCase().equals(options[i].toLowerCase())) {
                     chosen = choice;
+                }
+                try {
+                    int choice_num = Integer.valueOf(choice);
+                    if (choice_num > 0 && choice_num <= options.length) {
+                        chosen = options[choice_num - 1];
+                    }
+                } catch (Exception e) {
+                    // do nothing
                 }
             }
             if (chosen == "") {
@@ -43,13 +53,8 @@ public class Main {
             if (choice.equals("Shop")) {
                 String[] shopOptions = loc.getStoreNames();
                 String shop = ChooseOptions(shopOptions, "Which of these stores would you like to go in?");
-                for (int i = 0; i < loc.getStores().size(); i++) {
-                    if (shop.equals(loc.getStores().get(i).getName()))
-                        ;
-                    {
-                        displayStoreMenu(loc.getStores().get(i));
-                    }
-                }
+                displayStoreMenu(loc.getStore(shop));
+
 
             } else if (choice.equals("Dine")) {
                 System.out.println("You have chosen dine. Here is a list of restaurants in _.");
@@ -94,80 +99,64 @@ public class Main {
         }
     }
 
-    public static void displayStoreMenu(Store s)
-    {
+    public static void displayStoreMenu(Store s) {
         boolean b = false;
 
         while (!b) {
-            String[] options = {"Browse Items", "Purchase Items", "Leave"};
+            String[] options = { "Browse Items", "Purchase Items", "Leave" };
             String choice = ChooseOptions(options, "Welcome to " + s.getName() + "! How can I help you?");
             if (choice.equals("Browse Items")) {
                 String[] moreOptions = s.getItemList();
                 String selectedItem = ChooseOptions(moreOptions, "What would you like to look at?");
-                for(int i = 0; i < s.getItems().size(); i++)
-                {
-                    if(s.getItems().get(i).getName().equals(selectedItem))
-                    {
-                        System.out.println("You have selected " + selectedItem +". Here are some details:");
-                        for(Item j : s.getItems())
-                        {
-                            if(j.getName().equals(selectedItem))
-                            {
+                for (int i = 0; i < s.getItems().size(); i++) {
+                    if (s.getItems().get(i).getName().equals(selectedItem)) {
+                        System.out.println("You have selected " + selectedItem + ". Here are some details:");
+                        for (Item j : s.getItems()) {
+                            if (j.getName().equals(selectedItem)) {
                                 System.out.println(j.getName());
-                                System.out.println(j.getDescrip());
+                                System.out.println(j.getDescription());
                                 System.out.println(j.getPrice());
                             }
-        
+
                         }
-                        String[] yetMoreOptions = {"Add to basket", "Go back"};
+                        String[] yetMoreOptions = { "Add to basket", "Go back" };
                         String selectedItem2 = ChooseOptions(yetMoreOptions, "What would you like to do?");
-                        if(selectedItem2.equals("Add to basket"))
-                        {
-                            for(int k = 0; k < s.getItems().size(); k++)
-                            {
-                                if(s.getItems().get(k).getName().equals(selectedItem2)
-                                {
-                                    s.addToBasket(s.getItems().get(k));
+                        if (selectedItem2.equals("Add to basket")) {
+                            for (int k = 0; k < s.getItems().size(); k++) {
+                                Item it = s.getItems().get(k);
+                                if (it.getName().equals(selectedItem)) {
+                                    s.addToBasket(it);
                                     System.out.println("Added to basket.");
                                     displayStoreMenu(s);
 
                                 }
                             }
-                            
-                        }
-                        else if(selectedItem2.equals("Go back"))
-                        {
+
+                        } else if (selectedItem2.equals("Go back")) {
                             displayStoreMenu(s);
                         }
 
                     }
                 }
-            }
-            else if (choice.equals("Purchase Items")) {
-                if(s.getBasketTotal() > 0)
-                {
-                    String[] options2 = {"Buy", "Never mind"};
-                    String choice2 = ChooseOptions(options2, "Your total will be " + s.getBasketTotal() + ". Proceed? \n Yes \n No");
+            } else if (choice.equals("Purchase Items")) {
+                if (s.getBasketTotal() > 0) {
+                    String[] options2 = { "Buy", "Never mind" };
+                    String choice2 = ChooseOptions(options2,
+                            "Your total will be " + s.getBasketTotal() + ". Proceed? \n Yes \n No");
                     {
-                        if(choice2.toLowerCase().equals("yes"))
-                        {
-                            part.decreaseBudget(s.getBasketTotal());
+                        if (choice2.toLowerCase().equals("yes")) {
+                            party.decreaseBudget(s.getBasketTotal());
                             System.out.println("Thank you for shopping at " + s.getName());
                             displayMenu();
-                        }
-                        else if(choice2.toLowerCase().equals("never mind"))
-                        {
+                        } else if (choice2.toLowerCase().equals("never mind")) {
                             System.out.println("Okay, back to menu.");
                             displayStoreMenu(s);
                         }
                     }
-                }
-                else{
+                } else {
                     System.out.println("Sorry, your basket is empty. Add something and try again");
                 }
-            }
-            else if (choice.equals("Leave"))
-            {
+            } else if (choice.equals("Leave")) {
                 System.out.println("Thank you for shopping at " + s.getName());
                 displayMenu();
             }
@@ -177,21 +166,22 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Boolean debug = true;
         if (debug == true) {
             disneyland.getPartyLoc();
             partySize = 2;
             Person p = new Person("hat", true);
-            party.add(p);
+            people.add(p);
             Person o = new Person("bat", true);
-            party.add(o);
-            Party part = new Party(party);
+            people.add(o);
+            Party part = new Party(people);
             displayMenu();
         }
         disneyland.getPartyLoc();
         System.out.println("Hello and welcome to Disneyland! How many in your party?");
         partySize = scan.nextInt();
         while (partySize > 8) {
-            System.out.println("I'm sorry, parties may only have 8 people maximum. Please reenter your party size");
+            System.out.println("I'm sorry, parties may only have 8 people maximum. Please reenter your people size");
             partySize = scan.nextInt();
         }
         System.out.println("Great, " + partySize + " people. Now, let's get some details.");
@@ -209,12 +199,12 @@ public class Main {
             }
             System.out.println("Great, person " + i + "'s name is " + name + ", and adult: " + isAdult);
             Person p = new Person(name, isAdult);
-            party.add(p);
+            people.add(p);
         }
 
-        Party part = new Party(party);
+        Party party = new Party(people);
 
-        System.out.println("Great! Your party's budget for the day will be $" + part.getBudget() + ". Good luck!");
+        System.out.println("Great! Your party's budget for the day will be $" + party.getBudget() + ". Good luck!");
         /*
          * for(int i = 0; i < part.getSize(); i++)
          * {

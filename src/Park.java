@@ -20,9 +20,18 @@ public class Park
         // entrance
         map[2][1] = new Lands("Entrance", "Main entrance to the park");
 
+        // stores 
+        Store s = new Store("World of Disney");
+        s.addItem(new Item("hat", 12.50, "a hat"));
+
+        Dining d = new Dining("Plaza Gardens");
+        d.addItem(new Item("burger", 15.00, "A Burger."));
+
         // main street
+
         map[1][1] = new Lands("Main Street", "Main street USA, hub of shops");
-        map[1][1].addStore((new Store("World of Disney")));
+        map[1][1].addStore(s);
+        map[1][1].addDining(d);
         map[1][1].addStore((new Store("The Mad Hatter")));
         map[1][1].addStore((new Store("Candy Palace")));
         // fantasyland
