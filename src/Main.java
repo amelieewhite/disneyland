@@ -36,20 +36,20 @@ public class Main {
         disneyland.move("Main Street");
 
         while (!b) {
-            String[] options = { "Shop", "Dine", "Ride", "Activities", "Leave" } ;
+            String[] options = { "Shop", "Dine", "Ride", "Activities", "Leave" };
             Lands loc = disneyland.getPartyLocation();
-            String choice = ChooseOptions(options, "You are currently in " + loc.getName() + ". What would you like to do?");
+            String choice = ChooseOptions(options,
+                    "You are currently in " + loc.getName() + ". What would you like to do?");
             if (choice.equals("Shop")) {
                 String[] shopOptions = loc.getStoreNames();
                 String shop = ChooseOptions(shopOptions, "Which of these stores would you like to go in?");
-                for(int i = 0; i < loc.getStores().size(); i++)
-                {
-                    if(shop.equals(loc.getStores().get(i).getName()));
+                for (int i = 0; i < loc.getStores().size(); i++) {
+                    if (shop.equals(loc.getStores().get(i).getName()))
+                        ;
                     {
                         displayStoreMenu(loc.getStores().get(i));
                     }
                 }
-        
 
             } else if (choice.equals("Dine")) {
                 System.out.println("You have chosen dine. Here is a list of restaurants in _.");
@@ -93,6 +93,7 @@ public class Main {
 
         }
     }
+
     public static void displayStoreMenu(Store s)
     {
         boolean b = false;
@@ -159,7 +160,6 @@ public class Main {
                             System.out.println("Okay, back to menu.");
                             displayStoreMenu(s);
                         }
-                        }
                     }
                 }
                 else{
@@ -174,11 +174,9 @@ public class Main {
 
         }
 
-
     }
 
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         disneyland.getPartyLoc();
         System.out.println("Hello and welcome to Disneyland! How many in your party?");
         partySize = scan.nextInt();
