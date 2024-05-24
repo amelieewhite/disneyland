@@ -40,7 +40,15 @@ public class Main {
             Lands loc = disneyland.getPartyLocation();
             String choice = ChooseOptions(options, "You are currently in " + loc.getName() + ". What would you like to do?");
             if (choice.equals("Shop")) {
-                String shop = ChooseOptions(loc.getStoreNames(), "Which of these stores would you like to go in?");
+                String[] shopOptions = loc.getStoreNames();
+                String shop = ChooseOptions(shopOptions, "Which of these stores would you like to go in?");
+                for(int i = 0; i < loc.getStores().size(); i++)
+                {
+                    if(shop.equals(loc.getStores().get(i).getName()));
+                    {
+                        displayStoreMenu(loc.getStores().get(i));
+                    }
+                }
         
 
             } else if (choice.equals("Dine")) {
@@ -91,9 +99,48 @@ public class Main {
 
         while (!b) {
             String[] options = {"Browse Items", "Purchase Items", "Leave"};
-            String choice = ChooseOptions(options, "Welcome to + " + s.getName() + "! How can I help you?");
+            String choice = ChooseOptions(options, "Welcome to " + s.getName() + "! How can I help you?");
             if (choice.equals("Browse Items")) {
-                String shop = ChooseOptions(s.getItemList(), "What would you like to look at?");
+                String[] moreOptions = s.getItemList();
+                String selectedItem = ChooseOptions(moreOptions, "What would you like to look at?");
+                for(int i = 0; i < s.getItems().size(); i++)
+                {
+                    if(s.getItems().get(i).getName().equals(selectedItem))
+                    {
+                        System.out.println("You have selected " + selectedItem +". Here are some details:");
+                        for(Item j : s.getItems())
+                        {
+                            if(j.getName().equals(selectedItem))
+                            {
+                                System.out.println(j.getName());
+                                System.out.println(j.getDescrip());
+                                System.out.println(j.getPrice());
+                            }
+        
+                        }
+                        String[] yetMoreOptions = {"Add to basket", "Go back"};
+                        String selectedItem2 = ChooseOptions(yetMoreOptions, "What would you like to do?");
+                        if(selectedItem2.equals("Add to basket"))
+                        {
+                            for(int k = 0; k < s.getItems().size(); k++)
+                            {
+                                if(s.getItems().get(k).getName().equals(selectedItem2)
+                                {
+                                    s.addToBasket(s.getItems().get(k));
+                                    System.out.println("Added to basket.");
+                                    displayStoreMenu(s);
+
+                                }
+                            }
+                            
+                        }
+                        else if(selectedItem2.equals("Go back"))
+                        {
+                            displayStoreMenu(s);
+                        }
+
+                    }
+                }
             }
             else if (choice.equals("Purchase Items")) {
                 if(s.getBasketTotal() > 0)
@@ -103,12 +150,28 @@ public class Main {
                     {
                         if(choice2.toLowerCase().equals("yes"))
                         {
-                            
+                            part.decreaseBudget(s.getBasketTotal());
+                            System.out.println("Thank you for shopping at " + s.getName());
+                            displayMenu();
+                        }
+                        else if(choice2.toLowerCase().equals("never mind"))
+                        {
+                            System.out.println("Okay, back to menu.");
+                            displayStoreMenu(s);
+                        }
                         }
                     }
                 }
-                String shop = ChooseOptions(s.getItemList(), "What would you like to look at?");
+                else{
+                    System.out.println("Sorry, your basket is empty. Add something and try again");
+                }
             }
+            else if (choice.equals("Leave"))
+            {
+                System.out.println("Thank you for shopping at " + s.getName());
+                displayMenu();
+            }
+
         }
 
 

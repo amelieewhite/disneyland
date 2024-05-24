@@ -9,16 +9,12 @@ public class Person
 {
     private String name;
     private boolean isAdult;
-    private int morale;
-    private int energy;
     private double ticketPrice;
 
     public Person(String n, boolean iA)
     {
         name = n;
         isAdult = iA;
-        morale = 100;
-        energy = 100;
         if(isAdult)
         {
             ticketPrice = 170.0;
@@ -27,48 +23,6 @@ public class Person
         {
             ticketPrice = 130.0;
             // prices are just place holders for now, will be updated 
-        }
-    }
-
-    public void decreaseEnergy(int howMuch)
-    {
-        if(energy - howMuch >= 0)
-        {
-            energy -= howMuch;
-        }
-        else {
-            energy = 0;
-        }
-    }
-
-    public void increaseEnergy(int howMuch)
-    {
-        if(energy + howMuch <= 100)
-        {
-            energy += howMuch;
-        }
-        else {
-            energy = 100;
-        }
-    }
-    public void increaseMorale(int howMuch)
-    {
-        if(morale + howMuch <= 100)
-        {
-            morale += howMuch;
-        }
-        else {
-            morale = 100;
-        }
-    }
-    public void decreaseMorale(int howMuch)
-    {
-         if(morale - howMuch >= 0)
-        {
-            morale -= howMuch;
-        }
-        else {
-            morale = 0;
         }
     }
 
@@ -84,14 +38,6 @@ public class Person
     public void setStatus(boolean adult)
     {
         isAdult = adult;
-    }
-    public int getEnergyLvl()
-    {
-        return energy;
-    }
-    public int getMoraleLvl()
-    {
-        return morale;
     }
     public double getTicketPrice()
     {

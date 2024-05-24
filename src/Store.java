@@ -24,6 +24,10 @@ public class Store
       }
       return opts;
       }
+      public ArrayList<Item> getItems()
+   {
+      return items;
+      }
       public void addToBasket(Item i)
       {
          basket.add(i);

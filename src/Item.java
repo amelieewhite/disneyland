@@ -8,13 +8,13 @@
 public class Item 
     {
     String name = "";
+    String desc = "";
     double price = 0.00;
-    String need = "";
 
-    public Item(String n, double p, String nD) {
+    public Item(String n, double p, String d) {
         name = n;
         price = p;
-        need = nD;
+        desc = d;
     }
 
      public double getPrice()
@@ -26,8 +26,8 @@ public class Item
          return name;
     }
 
-      public String getNeed()
+      public String getDescrip()
     {
-        return need;
+        return desc;
     }
 }
