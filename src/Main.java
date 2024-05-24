@@ -177,6 +177,16 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        if (debug == true) {
+            disneyland.getPartyLoc();
+            partySize = 2;
+            Person p = new Person("hat", true);
+            party.add(p);
+            Person o = new Person("bat", true);
+            party.add(o);
+            Party part = new Party(party);
+            displayMenu();
+        }
         disneyland.getPartyLoc();
         System.out.println("Hello and welcome to Disneyland! How many in your party?");
         partySize = scan.nextInt();
