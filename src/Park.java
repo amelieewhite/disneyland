@@ -149,15 +149,42 @@ public class Park
         th.addItem(new Item("Dole Whip", 7.50, "Frozen pineapple sorbet!"));
 
         // AL EVENTS
-        Activities map = new Activities("Meet a Pirate", "Meet a pirate and practice your pirate-speak!");
+        Activities mp = new Activities("Meet a Pirate", "Meet a pirate and practice your pirate-speak!");
 
         // AL STORES
         Store tsam = new Store("Trader Sam's");
         tsam.addItem(new Item("Pirate hat", 14.99, "Channel your inner pirate!"));
-        tsam.addItem(new Item("")
+        tsam.addItem(new Item("Indiana Jones Figurine", 9.99, "Neat!"));
+        tsam.addItem(new Item("Bubble wand", 15.00, "Pop, pop, pop!"));
+
+        Store mc = new Store("Merch Cart");
+        mc.addItem(new Item("Mickey Mouse Hat", 20.00, "Who doesn't want to be like Mickey?"));
+        mc.addItem(new Item("Disneyland Sweatshirt", 30.00, "Make all your friend's jealous with this comfy and stylish sweatshirt!"));
+        mc.addItem(new Item("Annual Pass", 999.99, "Cmon, you know you want to"));
 
         // adventureland
-        map[2][0] = new Lands("Adventureland", "Desc. here");
+        map[2][0] = new Lands("Adventureland", "Home of all things adventuring!");
+        map[2][0].addDining(bbbq);
+        map[2][0].addDining(th);
+        map[2][0].addDining(tp);
+        map[2][0].addRide(sm);
+        map[2][0].addRide(potc);
+        map[2][0].addRide(jc);
+        map[2][0].addRide(ij);
+        map[2][0].addRide(hm);
+        map[2][0].addEvent(mp);
+        map[2][0].addStore(tsam);
+        map[2][0].addStore(mc);
+
+
+        // TL RIDES
+        Ride s
+
+        // TL DINING
+
+        // TL STORES
+
+        // TL EVENTS
 
         // tomorrowland
         map[2][2] = new Lands("Tomorrowland", "desc");
