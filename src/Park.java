@@ -178,7 +178,6 @@ public class Park
 
 
         // TL RIDES
-        Ride s
 
         // TL DINING
 
