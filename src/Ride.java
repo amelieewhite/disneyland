@@ -2,56 +2,43 @@ public class Ride
 {
     private String name;
     private int waitTime;
-    private int moraleBoost;
+
 
     
-    public Ride(String n, int time, int boost)
+    public Ride(String n, int time)
     {
         name = n;
         waitTime = time;
-        moraleBoost = boost;
 
     }
     public String runRide()
     {
-        int rand = (int) Math.random()*10;
+        int rand = (int) Math.random()*6;
         if(rand == 0)
         {
-            return "Whee! That was fun! Morale + " + moraleBoost + "!";
-            morale += moraleBoost;
+            return "Whee! That was fun!";
         }
-        if(rand == 1)
+        else if(rand == 1)
         {
-            return "Oh no! You got motion sick :(. Morale - " + moraleBoost + "!";
-            morale -= moraleBoost;
+            return "Oh no! You got motion sick :(!";
         }
-        if(rand == 2)
+        else if(rand == 2)
         {
-            return "Front row! That was awesome! Morale + " + moraleBoost*2 + "!";
-            morale += moraleBoost*2;
+            return "Front row! That was awesome!!";
         }
-        if(rand == 3)
+        else if(rand == 3)
         {
-            return "Uh oh, " + name + " got stuck! 15 minutes lost. Morale - " + moraleBoost*2 + "!";
+            return "Uh oh, " + name + " got stuck! How boring!";
         }
-        if(rand == 4)
+        else if(rand == 4)
         {
-            return "Again, again! Morale + " + moraleBoost + "!";
-            morale += moraleBoost;
-        }
-        if(rand == 5)
-        {
-            return "";
-        }
-
-        if(moraleBoost-- >= 0)
-        {
-            moraleBoost--;
+            return "Again, again!";
         }
         else
         {
-            morale = 0;
+            return "Woah, that was fast!";
         }
+
     }
 //Getters
     public String getName()
@@ -61,9 +48,5 @@ public class Ride
     public int getWaitTime()
     {
         return waitTime;
-    }
-    public int getMoraleBoost()
-    {
-        return moraleBoost;
     }
 }

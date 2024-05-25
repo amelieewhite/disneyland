@@ -57,13 +57,9 @@ public class Main {
 
 
             } else if (choice.equals("Dine")) {
-                System.out.println("You have chosen dine. Here is a list of restaurants in _.");
-                System.out.println("dine 1 \n dine 2 \n dine 3");
-                System.out.println("Which would you like to go to?");
-                String nextChoice = scan.nextLine();
-                if (nextChoice.equals("dine 1")) {
-                    System.out.println("testing");
-                }
+                String[] dineOptions = loc.getDiningNames();
+                String shop = ChooseOptions(dineOptions, "Which of these restraunts would you like to go in?");
+                displayDineMenu(loc.getStore(shop));
 
             } else if (choice.equals("Go on a ride")) {
                 System.out.println("You have chosen ride. Here is a list of rides in _.");
@@ -158,6 +154,72 @@ public class Main {
                 }
             } else if (choice.equals("Leave")) {
                 System.out.println("Thank you for shopping at " + s.getName());
+                displayMenu();
+            }
+
+        }
+
+    }
+
+    public static void displayDineMenu(Store s) {
+        boolean b = false;
+
+        while (!b) {
+            String[] options = { "Browse Menu", "Purchase Items", "Leave" };
+            String choice = ChooseOptions(options, "Welcome to " + s.getName() + "! What can I get you today?");
+            if (choice.equals("Browse Menu")) {
+                String[] moreOptions = s.getItemList();
+                String selectedItem = ChooseOptions(moreOptions, "What would you like to order?");
+                for (int i = 0; i < s.getItems().size(); i++) {
+                    if (s.getItems().get(i).getName().equals(selectedItem)) {
+                        System.out.println("You have selected " + selectedItem + ". Here are some details:");
+                        for (Item j : s.getItems()) {
+                            if (j.getName().equals(selectedItem)) {
+                                System.out.println(j.getName());
+                                System.out.println(j.getDescription());
+                                System.out.println(j.getPrice());
+                            }
+
+                        }
+                        String[] yetMoreOptions = { "Add to basket", "Go back" };
+                        String selectedItem2 = ChooseOptions(yetMoreOptions, "What would you like to order?");
+                        if (selectedItem2.equals("Add to basket")) {
+                            for (int k = 0; k < s.getItems().size(); k++) {
+                                Item it = s.getItems().get(k);
+                                if (it.getName().equals(selectedItem)) {
+                                    s.addToBasket(it);
+                                    System.out.println("Added to basket.");
+                                    displayStoreMenu(s);
+
+                                }
+                            }
+
+                        } else if (selectedItem2.equals("Go back")) {
+                            displayStoreMenu(s);
+                        }
+
+                    }
+                }
+            } else if (choice.equals("Purchase Items")) {
+                if (s.getBasketTotal() > 0) {
+                    String[] options2 = { "Buy", "Never mind" };
+                    String choice2 = ChooseOptions(options2,
+                            "Your total will be " + s.getBasketTotal() + ". Proceed? \n Yes \n No");
+                    {
+                        if (choice2.toLowerCase().equals("yes")) {
+                            party.decreaseBudget(s.getBasketTotal());
+                            System.out.println("Thank you for shopping at " + s.getName() + "! Enjoy your food.");
+                            displayMenu();
+                        } else if (choice2.toLowerCase().equals("never mind")) {
+                            System.out.println("Okay, back to menu.");
+                            displayStoreMenu(s);
+                        }
+                    }
+                } else {
+                    System.out.println("Sorry, your basket is empty. Add something and try again");
+                }
+            } else if (choice.equals("Leave")) {
+                System.out.println("Thank you for dining at " + s.getName());
                 displayMenu();
             }
 

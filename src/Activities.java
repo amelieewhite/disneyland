@@ -1,14 +1,12 @@
 public class Activities
   {
     private String activityName;
-    private int duration;
-    private int mBoost;
+    private String desc;
 
-    public Activities(String n, int d, int boost)
+    public Activities(String n, String d)
     {
       activityName = n;
-      duration = d;
-      mBoost = boost;
+      desc = d;
     }
 
     //getters
@@ -16,12 +14,9 @@ public class Activities
     {
       return activityName;
     }
-    public int getDuration()
+    public String getDesc()
     {
-      return duration;
+      return desc;
     }
-    public int getMBoost()
-    {
-      return mBoost;
-    }
+    
   }
