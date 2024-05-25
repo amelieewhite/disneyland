@@ -130,12 +130,31 @@ public class Park
         
         // AL RIDES
         Ride ij = new Ride("Indiana Jones", 45);
-
+        Ride jc = new Ride("Jungle Cruise", 25);
+        Ride sm = new Ride("Splash Mountain", 40);
+        Ride potc = new Ride("Pirates of the Carribean", 20);
+        Ride hm = new Ride("Haunted Mansion", 30);
         // AL DINING
+        Dining tp = new Dining("Tiana's Palace");
+        tp.addItem(new Item("Gumbo", 15.5, "Tiana's famous gumbo"));
+        tp.addItem(new Item("Hamburger", 10.99, "A classic!"));
+        tp.addItem(new Item("Beignets", 9.99, "Delicious and soft!"));
+
+        Dining bbbq = new Dining("Bengal BBQ");
+        bbbq.addItem(new Item("Chicken Skewers", 8.99, "Yummy, spicy chicken skewers!"));
+        bbbq.addItem(new Item("Fries", 5.50, "Crispy and salty"));
+        bbbq.addItem(new Item("Chopped Salad", 11.50, "A refreshing salad."));
+
+        Dining th = new Dining("Tiki Hut");
+        th.addItem(new Item("Dole Whip", 7.50, "Frozen pineapple sorbet!"));
 
         // AL EVENTS
+        Activities map = new Activities("Meet a Pirate", "Meet a pirate and practice your pirate-speak!");
 
         // AL STORES
+        Store tsam = new Store("Trader Sam's");
+        tsam.addItem(new Item("Pirate hat", 14.99, "Channel your inner pirate!"));
+        tsam.addItem(new Item("")
 
         // adventureland
         map[2][0] = new Lands("Adventureland", "Desc. here");
