@@ -12,20 +12,14 @@ public class Lands {
     private ArrayList<Ride> rides;
     private ArrayList<Activities> events;
     private ArrayList<Dining> dining;
-    private String description;
     private String landName;
 
-    public Lands(String n, String d) {
+    public Lands(String n) {
         landName = n;
-        description = d;
         stores = new HashMap<String, Store>();
         rides = new ArrayList<Ride>();
         events = new ArrayList<Activities>();
         dining = new ArrayList<Dining>();
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public String getName() {
