@@ -184,6 +184,412 @@ Activities fantasyLandAct2 = new Activities("Get made-over at the Bibbidi Bobbid
 Activities fantasyLandAct3 = new Activities("Walk through the castle", "Take a tour of Sleeping Beauty's castle!");
         
 
+// *TOMORROWLAND**
+
+// TOMORROWLAND ITEMS
+Item alienAntenna = new Item("Alien Antenna Hat", 11.99, "An out-of-this-world hat");
+Item spaceRangerPin = new Item("Space Ranger Pin", 8.99, "Welcome to star command, space ranger!");
+Item helmet = new Item("Space Helmet", 15.99, "A must for an explorer such as yourself");
+Item astronautIceCream = new Item("Astronaut Ice Cream", 14.99, "Freeze-dried ice cream!");
+Item rocketBalloon = new Item("Rocket Balloon", 3.99, "It even flies!");
+
+// TOMORROWLAND FOOD
+Food alienMochi = new Food("Alien Mochi", 6.99, "Chewy and sweet!");
+Food salad = new Food("'Starfield Salad", 9.99, "Galactic goodness!");
+Food turkey = new Food("Turkey Leg", 5.99, "A delicious turkey leg");
+Food orangeOribit = new Food("Orange Orbit Soda", 4.99, "Orange soda with popping boba");
+Food rocketPop = new Food("Rocket Pop", 3.99, "A rocket-shaped popsicle");
+
+// TOMORROWLAND RIDES
+
+Ride tomorrowRide1 = new Ride("Space Mountain", 45);
+Ride tomorrowRide2 = new Ride("Autopia", 15);
+Ride tomorrowRide3 = new Ride("Buzz Lightyear's Astro Blasters", 20);
+
+// TOMORROWLAND STORES
+
+//TOMORROWLAND STORE 1
+Store tomorrowStore1 = new Store("Star Traders");
+tomorrowStore1.addItem(hoodie);
+tomorrowStore1.addItem(rocketBalloon);
+tomorrowStore1.addItem(cap);
+tomorrowStore1.addItem(key);
+tomorrowStore1.addItem(helmet);
+
+
+// TOMORRROWLAND STORE 2
+Store tomorrowStore2 = new Store("The Space Place");
+tomorrowStore2.addItem(ears);
+tomorrowStore2.addItem(bubbles);
+tomorrowStore2.addItem(alienAntenna);
+tomorrowStore2.addItem(key);
+tomorrowStore2.addItem(astronautIceCream);
+
+// TOMORROWLAND STORE 3
+Store tomorrowStore3 = new Store("Light & Power Co.");
+tomorrowStore3.addItem(spaceRangerPin);
+tomorrowStore3.addItem(rocketBalloon);
+tomorrowStore3.addItem(mug);
+tomorrowStore3.addItem(globe);
+tomorrowStore3.addItem(ears);
+
+// TOMORROWLAND DINING
+
+// TOMORROWLAND DINING 1
+Dining tomorrowDining1 = new Dining("Pizza Planet");
+tomorrowDining1.addItem(pZ);
+tomorrowDining1.addItem(salad);
+tomorrowDining1.addItem(orangeOribit);
+tomorrowDining1.addItem(fries);
+tomorrowDining1.addItem(soda);
+
+
+//TOMORROWLAND DINING 2
+Dining tomorrowDining2 = new Dining("Galactic Grill");
+fantasyDining2.addItem(burger);
+fantasyDining2.addItem(fries);
+fantasyDining2.addItem(cupcake);
+fantasyDining2.addItem(alienMochi);
+fantasyDining2.addItem(rocketPop);
+
+//TOMORROWLAND DINING 3
+Dining tomorrowDining3 = new Dining("Turkey Leg Cart");
+fantasyDining3.addItem(turkey);
+fantasyDining3.addItem(pret);
+fantasyDining3.addItem(soda);
+
+// TOMORROWLAND ACTIVITIES
+
+Activities tomorrowLandAct1 = new Activities("Stargaze", "Find hidden stars around tomorrowland!");
+Activities tomorrowLandAct2 = new Activities("Search for aliens", "You never know!");
+Activities tomorrowLandAct3 = new Activities("Meet Buzz Lightyear", "Meet the one and only Buzz!");
+        
+
+// *FRONTIERLAND**
+
+// FRONTIERLAND ITEMS
+Item cowboyHat = new Item("Cowboy Hat", 11.99, "Yeehaw!");
+Item sherriffStar = new Item("Sherriff Badge", 8.99, "Howdy, Sherriff!");
+Item journal = new Item("Journal", 7.99, "A leather journal");
+Item cowboyMug = new Item("Cowboy Mug",9.99, "A cowboy-boot shaped mug!");
+Item westernJigsaw = new Item("Jigsaw", 8.99, "A western themed jigsaw puzzle");
+
+// FRONTIERLAND FOOD
+Food funnelCake = new Food("Funnel Cake", 6.99, "A theme park classic!");
+Food cowboyBark = new Food("Cowboy Bark", 4.99, "Chocolate bark loaded with nuts, pretzels, and candies, perfect for satisfying your sweet tooth!");
+Food fruitPunch = new Food("Frontierland Fruit Punch", 5.99, "A delicious and fruity beverage");
+Food nachos = new Food("Nachos", 11.99, "Warm and fresh nachos");
+Food tenders = new Food("Chicken Tenders", 9.99, "Crispy chicken tenders");
+
+// FRONTIERLAND RIDES
+
+Ride frontierlandRide1 = new Ride("Big Thunder Mountain", 45);
+Ride frontierlandRide2 = new Ride("Splash Mountain", 20);
+Ride frontierlandRide3 = new Ride("Mark Twain Riverboat", 15);
+
+// FRONTIERLAND STORES
+
+//FRONTIERLAND STORE 1
+Store frontierlandStore1 = new Store("Pioneer Mercantile");
+frontierlandStore1.addItem(hoodie);
+frontierlandStore1.addItem(cowboyHat);
+frontierlandStore1.addItem(key);
+frontierlandStore1.addItem(bubbles);
+frontierlandStore1.addItem(sherriffStar);
+
+
+// FRONTIERLAND STORE 2
+Store frontierlandStore2 = new Store("Silver Spur Supplies");
+frontierlandStore2.addItem(ears);
+frontierlandStore2.addItem(journal);
+frontierlandStore2.addItem(cowboyMug);
+frontierlandStore2.addItem(globe);
+frontierlandStore2.addItem(westernJigsaw);
+
+// FRONTIERLAND STORE 3
+Store frontierlandStore3 = new Store("Bonanza Outfitters");
+frontierlandStore3.addItem(backpack);
+frontierlandStore3.addItem(cowboyMug);
+frontierlandStore3.addItem(journal);
+frontierlandStore3.addItem(hoodie);
+frontierlandStore3.addItem(ears);
+
+// FRONTIERLAND DINING
+
+// FRONTIERLAND DINING 1
+Dining frontierLandDining1 = new Dining("Golden Horseshoe");
+frontierLandDining1.addItem(nachos);
+frontierLandDining1.addItem(tenders);
+frontierLandDining1.addItem(soda);
+frontierLandDining1.addItem(fries);
+frontierLandDining1.addItem(burger);
+
+
+//FRONTIERLAND DINING 2
+Dining frontierLandDining2 = new Dining("Stage Door Café");
+frontierLandDining2.addItem(funnelCake);
+frontierLandDining2.addItem(fruitPunch);
+frontierLandDining2.addItem(cupcake);
+frontierLandDining2.addItem(mW);
+frontierLandDining2.addItem(pret);
+
+//FRONTIERLAND DINING 3
+Dining frontierLandDining3 = new Dining("Frontierland Food Cart");
+frontierLandDining3.addItem(cowboyBark);
+frontierLandDining3.addItem(p);
+frontierLandDining3.addItem(soda);
+
+// FRONTIERLAND ACTIVITIES
+
+Activities frontierLandAct1 = new Activities("Tom Sawyer Island", "Take a raft to Tom Sawyer Island and explore!");
+Activities frontierLandAct2 = new Activities("Sailing Ship Columbia Voyage", "Set sail on sailing ship Columbia");
+Activities frontierLandAct3 = new Activities("Meet Sherriff Woody", "Meet the one and only Woody!");
+
+
+// *TOONTOWN**
+
+// TOONTOWN ITEMS
+Item mickeyPlush = new Item("Mickey Mouse Plush", 24.99, "Your own mickey mouse!");
+Item donaldDuckPoster = new Item("Donald Duck Poster", 11.99, "Donald Duck wall decoration");
+Item goofyPin = new Item("Goofy Pin", 7.99, "A Goofy pin");
+Item daisyDuckDuffelBag = new Item("Daisy Duck Duffel Bag",14.99, "A purple Daisy themed duffel bag!");
+Item minnieFigurine = new Item("Minnie Mouse Figurine", 9.99, "A perfect addition to any mantlepiece");
+
+// TOONTOWN FOOD
+Food strawberryLemonade = new Food("Strawberry Lemonade", 6.99, "A refreshing treat");
+Food cottonCandy = new Food("Cotton Candy", 4.99, "Sweet and fluffy cotton candy");
+Food hotDog = new Food("Hot Diggity Dog", 9.99, "A classic hotdog");
+Food milkshake = new Food("Clarabelle's Milkshake", 7.99, "A delicious cold milkshake");
+Food fruit = new Food("Minnie's Fresh Fruit", 9.99, "A cup of fresh fruit");
+
+// TOONTOWN RIDES
+
+Ride toontownRide1 = new Ride("Gadget's Go Coaster", 25);
+Ride toontownRide2 = new Ride("Donald's Boat", 15);
+Ride toontownRide3 = new Ride("Roger Rabbit's Car Toon Spin", 5);
+
+// TOONTOWN STORES
+
+//TOONTOWN STORE 1
+Store toontownStore1 = new Store("Toontown Five & Dime");
+toontownStore1.addItem(hoodie);
+toontownStore1.addItem(pin);
+toontownStore1.addItem(key);
+toontownStore1.addItem(mickeyPlush);
+toontownStore1.addItem(donaldDuckPoster);
+
+
+// TOONTOWN STORE 2
+Store toontownStore2 = new Store("Toontown Supply Co.");
+toontownStore2.addItem(ears);
+toontownStore2.addItem(minnieFigurine);
+toontownStore2.addItem(daisyDuckDuffelBag);
+toontownStore2.addItem(globe);
+toontownStore2.addItem(cap);
+
+// TOONTOWN STORE 3
+Store toontownStore3 = new Store("Toontown Cartoons");
+toontownStore3.addItem(backpack);
+toontownStore3.addItem(goofyPin);
+toontownStore3.addItem(mickeyPlush);
+toontownStore3.addItem(hoodie);
+toontownStore3.addItem(ears);
+
+// TOONTOWN DINING
+
+// TOONTOWN DINING 1
+Dining toontownDining1 = new Dining("Daisy's Diner");
+toontownDining1.addItem(burger);
+toontownDining1.addItem(cottonCandy);
+toontownDining1.addItem(soda);
+toontownDining1.addItem(strawberryLemonade);
+toontownDining1.addItem(burger);
+
+
+//TOONTOWN DINING 2
+Dining toontownDining2 = new Dining("Clarabelle's Hand-Scooped Ice Cream");
+toontownDining2.addItem(milkshake);
+toontownDining2.addItem(soda);
+toontownDining2.addItem(cupcake);
+toontownDining2.addItem(sC);
+toontownDining2.addItem(fruit);
+
+//TOONTOWN DINING 3
+Dining toontownDining3 = new Dining("Hot Dog Cart");
+toontownDining3.addItem(hotDog);
+toontownDining3.addItem(p);
+toontownDining3.addItem(soda);
+
+// TOONTOWN ACTIVITIES
+
+Activities toontownAct1 = new Activities("Meet Minnie Mousw", "Meet Minnie!");
+Activities toontownAct2 = new Activities("Interactive Play Areas", "Perfect for kids");
+Activities toontownAct3 = new Activities("Toontown Photo Ops", "Capture magical memories with themed photo opportunities");
+
+
+
+// *ADVENTURELAND**
+
+// ADVENTURELAND ITEMS
+Item pirateHat = new Item("Pirate Hat", 13.99, "Channel your inner pirate!");
+Item safariKit = new Item("Safari Kit", 16.99, "A kit full of all you need to survive a deadly safari");
+Item jacket = new Item("Indiana Jones' Jacket", 32.99, "Live out your dreams of becoming Indiana Jones!");
+Item simbaPlush = new Item("Simba Plush",19.99, "The lion king himself!");
+Item binoculars = new Item("Binoculars", 9.99, "A must for adventurers");
+
+// ADVENTURELAND FOOD
+Food doleWhip = new Food("Dole Whip", 6.99, "A delicious frozen pineapple treat");
+Food skewer = new Food("Chicken Skewers", 11.99, "Tangy and tasty chicken skewers");
+Food gumbo = new Food("Gumbo", 12.99, "Tiana's iconic gumbo");
+Food lumpia = new Food("Lumpia", 7.99, "Crispy and savory lumpia");
+Food smoothie = new Food("Mango Smoothie", 5.99, "A tasty treat for all");
+
+// ADVENTURELAND RIDES
+
+Ride adventureLandRide1 = new Ride("Pirates of the Carribean", 20);
+Ride adventureLandRide2 = new Ride("Jungle Cruise", 15);
+Ride adventureLandRide3 = new Ride("Indiana Jones Adventure", 30);
+
+// ADVENTURELAND STORES
+
+//ADVENTURELAND STORE 1
+Store adventureLandStore1 = new Store("Bengal Bazaar");
+adventureLandStore1.addItem(pin);
+adventureLandStore1.addItem(safariKit);
+adventureLandStore1.addItem(key);
+adventureLandStore1.addItem(binoculars);
+adventureLandStore1.addItem(bubbles);
+
+
+// ADVENTURELAND STORE 2
+Store adventureLandStore2 = new Store("Adventure Outpost");
+adventureLandStore2.addItem(ears);
+adventureLandStore2.addItem(jacket);
+adventureLandStore2.addItem(pirateHat);
+adventureLandStore2.addItem(globe);
+adventureLandStore2.addItem(cap);
+
+// ADVENTURELAND STORE 3
+Store adventureLandStore3 = new Store("Tropical Imports");
+adventureLandStore3.addItem(backpack);
+adventureLandStore3.addItem(binoculars);
+adventureLandStore3.addItem(simbaPlush);
+adventureLandStore3.addItem(pirateHat);
+adventureLandStore3.addItem(key);
+
+// ADVENTURELAND DINING
+
+// ADVENTURELAND DINING 1
+Dining adventureLandDining1 = new Dining("Bengal BBQ");
+adventureLandDining1.addItem(skewer);
+adventureLandDining1.addItem(fries);
+adventureLandDining1.addItem(smoothie);
+adventureLandDining1.addItem(pZ);
+adventureLandDining1.addItem(burger);
+
+
+//ADVENTURELAND DINING 2
+Dining adventureLandDining2 = new Dining("Enchanted Tiki Bar");
+adventureLandDining2.addItem(doleWhip);
+adventureLandDining2.addItem(soda);
+adventureLandDining2.addItem(lumpia);
+adventureLandDining2.addItem(pret);
+adventureLandDining2.addItem(smoothie);
+
+//ADVENTURELAND DINING 3
+Dining adventureLandDining3 = new Dining("Blue Bayou Restaurant");
+adventureLandDining3.addItem(pZ);
+adventureLandDining3.addItem(fries);
+adventureLandDining3.addItem(soda);
+adventureLandDining3.addItem(lumpia);
+
+// ADVENTURELAND ACTIVITIES
+
+Activities adventureLandAct1 = new Activities("Explore Tarzan's Treehouse", "Embark on an adventure through the treetops in Tarzan's Treehouse");
+Activities adventureLandAct2 = new Activities("Meet Jack Sparrow", "Convene with the swashbuckler himself!");
+Activities adventureLandAct3 = new Activities("Find Hidden Mickeys", "Adventureland is filled with hidden Mickey Mouse symbols scattered throughout the land. ");
+
+
+// *STAR WARS LAND**
+
+// STAR WARS LAND ITEMS
+Item lightSaber = new Item("Lightsaber", 24.99, "Use the force wisely!");
+Item r2d2 = new Item("R2D2 Plush", 16.99, "A olush of everyone's favorite droid");
+Item jediRobes = new Item("Jedi Robes", 19.99, "Geek out in these Jedi robes!");
+Item blaster = new Item("Toy Blaster",9.99, "A toy blaster!");
+Item yodaHat = new Item("Yoda Hat", 12.99, "Wear hat you will!");
+
+// STAR WARS LAND FOOD
+Food blueMilk = new Food("Blue Milk", 5.99, "Made from a blend of coconut and rice milk, flavored with tropical and fruity notes");
+Food rontoWrap = new Food("Ronto Wrap", 11.99, "A savory grilled sausage wrapped in a warm pita bread");
+Food tipYip = new Food("Endorian Tip-yip", 12.99, "Crispy chicken served with roasted vegetables and mashed potatoes");
+Food moofJuice = new Food("Moof Juice", 7.99, "A refreshing fruit beverage, featuring a blend of tropical fruit juices and flavors.");
+Food outpostMix = new Food("Outpost Mix", 6.99, "A colorful blend of sweet and savory popcorn");
+
+// STAR WARS LAND RIDES
+
+Ride starWarsLandRide1 = new Ride("Rise of the Resistance", 20);
+Ride starWarsLandRide2 = new Ride("Smuggler's Run", 35);
+
+// STAR WARS LAND STORES
+
+//STAR WARS LAND STORE 1
+Store starWarsLandStore1 = new Store("Droid Depot");
+starWarsLandStore1.addItem(r2d2);
+starWarsLandStore1.addItem(pin);
+starWarsLandStore1.addItem(key);
+starWarsLandStore1.addItem(jacket);
+starWarsLandStore1.addItem(lightSaber);
+
+
+// STAR WARS LAND STORE 2
+Store starWarsLandStore2 = new Store("First Order Cargo");
+starWarsLandStore2.addItem(cap);
+starWarsLandStore2.addItem(blaster);
+starWarsLandStore2.addItem(hoodie);
+starWarsLandStore2.addItem(globe);
+starWarsLandStore2.addItem(yodaHat);
+
+// STAR WARS LAND STORE 3
+Store starWarsLandStore3 = new Store("Resistance Supply");
+starWarsLandStore3.addItem(backpack);
+starWarsLandStore3.addItem(jediRobes);
+starWarsLandStore3.addItem(lightSaber);
+starWarsLandStore3.addItem(key);
+starWarsLandStore3.addItem(mug);
+
+// STAR WARS LAND DINING
+
+// STAR WARS LAND DINING 1
+Dining starWarsLandDining1 = new Dining("Ronto Roasters");
+starWarsLandDining1.addItem(rontoWrap);
+starWarsLandDining1.addItem(fries);
+starWarsLandDining1.addItem(soda);
+starWarsLandDining1.addItem(tipYip);
+starWarsLandDining1.addItem(burger);
+
+
+//STAR WARS LAND DINING 2
+Dining starWarsLandDining2 = new Dining("Docking Bay 7 Food and Cargo");
+starWarsLandDining2.addItem(moofJuice);
+starWarsLandDining2.addItem(soda);
+starWarsLandDining2.addItem(tipYip);
+starWarsLandDining2.addItem(pret);
+starWarsLandDining2.addItem(pZ);
+
+//STAR WARS LAND DINING 3
+Dining starWarsLandDining3 = new Dining("Milk Stand");
+starWarsLandDining3.addItem(blueMilk);
+starWarsLandDining3.addItem(outpostMix);
+starWarsLandDining3.addItem(soda);
+
+// STAR WARS LAND ACTIVITIES
+
+Activities starWarsLandAct1 = new Activities("Build a Custom Lightsaber", "Assemble a unique lightsaber, complete with hilt, blade, and activation ceremony.");
+Activities starWarsLandAct2 = new Activities("Decode Messages", "Reveal secrets and stories about the inhabitants of Batuu.");
+Activities starWarsLandAct3 = new Activities("Meet Darth Vader", "Come face to face with the notorious Darth Vader");
+
+
 
 
         // entrance
