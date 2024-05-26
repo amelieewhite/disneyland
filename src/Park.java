@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class park here.
@@ -16,19 +17,182 @@ public class Park
     {
         currLocation = new Location();
 
- 
+// ITEMS, STORES, DINING, ACTIVITIES, RIDES
+
+// *MAINSTREET*
+
+// MAINSTREET ITEMS (COULD ALSO BE GENERAL)
+
+Item ears = new Item("Minnie Mouse Ears", 12.99, "A disneyland staple!");
+Item pin = new Item("Souvenir Pin", 8.99, "Collect them all!");
+Item hoodie = new Item("Hoodie", 24.99, "Make all your friends jealous with this stylish hoodie");
+Item cap = new Item("Mickey Baseball Cap", 17.99, "For all the dads out there");
+Item bubbles = new Item("Bubble Wand", 11.99, "Pop, pop, pop!");
+Item backpack = new Item("Backpack", 19.99, "For all your carrying needs");
+Item globe = new Item("Snow Globe", 8.99, "Who doesn't love a snow globe?");
+Item magnet = new Item("Castle-Shaped Fridge Magnet", 12.99, "The perfect souvenir");
+Item mug = new Item("Mug", 14.99, "Convenient and cute");
+Item key = new Item("Keychain", 6.99, "Show off your trip with this cool keychain!");
+
+// MAINSTREET FOOD
+
+Food p = new Food("Popcorn", 3.99, "Buttery and delicious");
+Food sC = new Food("Sugar Cookie", 4.99, "A Mickey-shaped sugary cookie!");
+Food mW = new Food("Mickey Waffles", 9.99, "Delicious waffles!");
+Food lP = new Food("Lollipop", 3.99, "A swirly lollipop");
+Food pZ = new Food("Pizza Slice", 7.99, "Cheesy and yummy!");
+Food soda = new Food("Soda", 3.99, "Refreshing and bubbly");
+Food burger = new Food("Burger", 11.99, "A classic burger");
+Food cupcake = new Food("Cupcake", 6.99, "The perfect treat");
+Food pret = new Food("Pretzel", 6.99, "Salty and delicious");
+Food fries = new Food("Fries", 8.99, "Delightfully salty");
+
+// MAINSTREET STORES
+
+// store 1
+Store mainStore1 = new Store("World of Disney");
+mainStore1.addItem(ears);
+mainStore1.addItem(magnet);
+mainStore1.addItem(mug);
+mainStore1.addItem(hoodie);
+mainStore1.addItem(key);
+
+// store 2
+Store mainStore2 = new Store("The Mad Hatter");
+mainStore2.addItem(globe);
+mainStore2.addItem(bubbles);
+mainStore2.addItem(cap);
+mainStore2.addItem(magnet);
+mainStore2.addItem(hoodie);
+
+// store 3
+Store mainStore3 = new Store("The Disneyland Emporium");
+mainStore3.addItem(backpack);
+mainStore3.addItem(key);
+mainStore3.addItem(bubbles);
+mainStore3.addItem(cap);
+mainStore3.addItem(ears);
+
+
+// MAINSTREET DINING
+
+//dining 1
+Dining mainDining1 = new Dining("Popcorn Cart");
+mainDining1.addItem(p);
+mainDining1.addItem(soda);
+mainDining1.addItem(pret);
+
+// dining 2
+Dining mainDining2 = new Dining("Main Street Bakery");
+mainDining2.addItem(cupcake);
+mainDining2.addItem(sC);
+mainDining2.addItem(lP);
+mainDining2.addItem(mW);
+
+// dining 3
+Dining mainDining3 = new Dining("Plaza Gardens");
+mainDining3.addItem(pZ);
+mainDining3.addItem(fries);
+mainDining3.addItem(burger);
+mainDining3.addItem(soda);
+
+
+// MAINSTREET EVENTS
+
+Activities mainEvent1 = new Activities("Parade", "A celebration all can enjoy!");
+Activities mainEvent2 = new Activities("Take a photo in front of the castle", "Say cheese!");
+Activities mainEvent3 = new Activities("Admire Disneyland!", "Wow, it sure is nice here");
+
+
+// *FANTASYLAND**
+
+// FANTASYLAND ITEMS
+Item tiara = new Item("Tiara", 14.99, "Princess perfection!");
+Item princessDress = new Item("Princess Dress", 29.99, "Look like the princess you are!");
+Item wand = new Item("Magic Wand", 13.99, "Bibbidi Bobbidi Who?");
+Item fairyWings = new Item("Fairy Wings", 14.99, "Channel your inner tinkerbell!");
+Item bow = new Item("Hair Bow", 8.99, "A cute accessory akin to Minnie's classic bows!");
+
+// FANTASYLAND FOOD
+Food slush = new Food("Elsa's Frozen Slush", 6.99, "Brr!");
+Food poisonApple = new Food("'Poison' Candy Apple", 4.99, "Crispy, sweet, and..poison?");
+Food beignets = new Food("Tiana's Man-Catching Beignets", 8.99, "Delicious pillowy beignets");
+Food macaron = new Food("Minnie Macaron", 4.99, "A delightfully Minnie-shaped macaron!");
+Food churro = new Food("Churro", 7.99, "Delicious cinnamony churro!");
+
+// FANTASYLAND RIDES
+
+Ride fantasyRide1 = new Ride("It's a Small World", 15);
+Ride fantasyRide2 = new Ride("The Mad Hatter's Tea Party", 10);
+Ride fantasyRide3 = new Ride("Dumbo's Flying Elephants", 20);
+
+// FANTASYLAND STORES
+
+//FANTASYLAND STORE 1
+Store fantasyStore1 = new Store("Bibiddi Bobiddi Boutique");
+fantasyStore1.addItem(tiara);
+fantasyStore1.addItem(mug);
+fantasyStore1.addItem(princessDress);
+fantasyStore1.addItem(magnet);
+fantasyStore1.addItem(wand);
+
+
+// FANTASYLAND STORE 2
+Store fantasyStore2 = new Store("It's a Small Store");
+fantasyStore2.addItem(fairyWings);
+fantasyStore2.addItem(cap);
+fantasyStore2.addItem(bow);
+fantasyStore2.addItem(key);
+fantasyStore2.addItem(hoodie);
+
+// FANTASYLAND STORE 3
+Store fantasyStore3 = new Store("Fairy Tale Treasures");
+fantasyStore3.addItem(bubbles);
+fantasyStore3.addItem(tiara);
+fantasyStore3.addItem(wand);
+fantasyStore3.addItem(globe);
+fantasyStore3.addItem(ears);
+
+// FANTASYLAND DINING
+
+// FANTASYLAND DINING 1
+Dining fantasyDining1 = new Dining("Churro Cart");
+fantasyDining1.addItem(churro);
+fantasyDining1.addItem(soda);
+fantasyDining1.addItem(sC);
+
+
+//FANTASYLAND DINING 2
+Dining fantasyDining2 = new Dining("Red Rose Tavern");
+fantasyDining2.addItem(pZ);
+fantasyDining2.addItem(fries);
+fantasyDining2.addItem(beignets);
+fantasyDining2.addItem(mW);
+fantasyDining2.addItem(slush);
+
+//FANTASYLAND DINING 3
+Dining fantasyDining3 = new Dining("Maurice's Treats");
+fantasyDining3.addItem(macaron);
+fantasyDining3.addItem(poisonApple);
+fantasyDining3.addItem(cupcake);
+fantasyDining3.addItem(sC);
+
+// FANTASYLAND ACTIVITIES
+
+Activities fantasyLandAct1 = new Activities("Meet the princesses", "A meet and greet with all of your favourite princesses!");
+Activities fantasyLandAct2 = new Activities("Get made-over at the Bibbidi Bobbidi Boutique", "Get dressed up with your own personal fairy godmother!");
+Activities fantasyLandAct3 = new Activities("Walk through the castle", "Take a tour of Sleeping Beauty's castle!");
+        
+
+
+
         // entrance
         map[2][1] = new Lands("Entrance", "Main entrance to the park");
 
         //  MS stores 
-        Store s = new Store("World of Disney");
-        s.addItem(new Item("hat", 12.50, "a hat"));
 
-        Store c = new Store("The Mad Hatter");
-        c.addItem(new Item("Lollipop", 4.50, "a sweet treat, yum!"));
-
-        Store e = new Store("The Disneyland Emporium");
-        e.addItem(new Item("minnie ears", 30.50, "cute minnie ear headband"));
+        
+       
 
         // MS dining
         Dining d = new Dining("Plaza Gardens");
